@@ -60,6 +60,7 @@ sudo npm install n -g
 sudo n stable
 git clone https://github.com/s-nomp/s-nomp.git s-nomp
 cd s-nomp
+npm install @bitgo/utxo-lib
 npm update
 npm install
 ```
