@@ -47,8 +47,8 @@
         "node-watch": "^0.5.8",
         "nonce": "^1.0.4",
         "redis": "^2.8.0",
-        "request": "^2.88.0",
-        "stratum-pool": "git+https://github.com/Jockeyvb/node-stratum-pool-equihash.git"
+        "request": "^2.88.0"
+        
     },
     "engines": {
         "node": ">=8.11"
