@@ -108,9 +108,9 @@ function SetupForPool(logger, poolOptions, setupFinished){
                 logger.error(logSystem, logComponent, 'Error with payment processing daemon (validateAddress) ' + JSON.stringify(result.error));
                 callback(true);
             }
-            else if (!result.response || !result.response.isValid) {
+            else if (!result.response || !result.response.isvalid) {
                 logger.error(logSystem, logComponent,
-                    'Daemon does not own pool address - payment processing can not be done with this daemon, '
+                    'validateAddress:Daemon does not own pool address - payment processing can not be done with this daemon, '
                     + JSON.stringify(result.response));
                 callback(true);
             }
@@ -125,9 +125,9 @@ function SetupForPool(logger, poolOptions, setupFinished){
                 logger.error(logSystem, logComponent, 'Error with payment processing daemon (validateTAddress) ' + JSON.stringify(result.error));
                 callback(true);
             }
-            else if (!result.response || !result.response.isMine) {
+            else if (!result.response || !result.response.isvalid) {
                 logger.error(logSystem, logComponent,
-                    'Daemon does not own pool address - payment processing can not be done with this daemon, '
+                    'validateTAddress:Daemon does not own pool address - payment processing can not be done with this daemon, '
                     + JSON.stringify(result.response));
                 callback(true);
             }
@@ -142,9 +142,9 @@ function SetupForPool(logger, poolOptions, setupFinished){
                 logger.error(logSystem, logComponent, 'Error with payment processing daemon (validateZAddress) ' + JSON.stringify(result.error));
                 callback(true);
             }
-            else if (!result.response || !result.response.isMine) {
+            else if (!result.response || !result.response.isvalid) {
                 logger.error(logSystem, logComponent,
-                    'Daemon does not own pool address - payment processing can not be done with this daemon, '
+                    'validateZAddressDaemon does not own pool address - payment processing can not be done with this daemon, '
                     + JSON.stringify(result.response));
                 callback(true);
             }
